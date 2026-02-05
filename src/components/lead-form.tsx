@@ -79,7 +79,7 @@ export function LeadForm({
       toast.success("Запрос отправлен. Мы свяжемся с вами.");
       reset();
       onSuccess?.();
-    } catch (error) {
+    } catch {
       setStatus("error");
       toast.error("Не удалось отправить запрос. Попробуйте позже.");
     }
