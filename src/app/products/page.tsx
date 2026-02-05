@@ -1,15 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const metadata: Metadata = {
@@ -51,28 +43,27 @@ export default function ProductsPage() {
         </p>
       </div>
 
-        <Tabs defaultValue="list" className="mt-10">
+      <Tabs defaultValue="list" className="mt-12">
         <TabsList className="w-full justify-start gap-2 overflow-x-auto">
           <TabsTrigger value="list">Список</TabsTrigger>
           <TabsTrigger value="compare">Сравнение</TabsTrigger>
         </TabsList>
         <TabsContent value="list">
-          <div className="mt-6 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 grid gap-10 md:grid-cols-2">
             {products.map((product) => (
-              <Card key={product.title}>
-                <CardHeader className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <CardTitle>{product.title}</CardTitle>
-                    <Badge variant="outline">{product.status}</Badge>
-                  </div>
-                  <CardDescription>{product.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button variant="outline" asChild>
-                    <Link href={product.href}>Открыть</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+              <div key={product.title} className="space-y-4">
+                <div className="flex items-center justify-between text-xs uppercase tracking-[0.4em] text-muted-foreground">
+                  <span>{product.title}</span>
+                  <span>{product.status}</span>
+                </div>
+                <p className="text-lg font-heading text-foreground">
+                  {product.description}
+                </p>
+                <Button variant="ghost" asChild>
+                  <Link href={product.href}>Открыть</Link>
+                </Button>
+                <div className="h-px w-full bg-border" />
+              </div>
             ))}
           </div>
         </TabsContent>
@@ -110,9 +101,7 @@ export default function ProductsPage() {
                   <div className="px-4 py-3 text-muted-foreground">{row.audience}</div>
                   <div className="px-4 py-3 text-muted-foreground">{row.task}</div>
                   <div className="px-4 py-3 text-muted-foreground">{row.result}</div>
-                  <div className="px-4 py-3">
-                    <Badge variant="outline">{row.status}</Badge>
-                  </div>
+                  <div className="px-4 py-3 text-muted-foreground">{row.status}</div>
                 </div>
               ))}
             </div>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "О компании",
@@ -28,13 +27,11 @@ export default function AboutPage() {
 
       <section className="mt-10">
         <h2 className="text-xl font-semibold font-heading">Принципы</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <div className="mt-6 grid gap-6 md:grid-cols-3">
           {["First principles", "Ясность", "Измеримость"].map((item) => (
-            <Card key={item}>
-              <CardContent className="p-6 text-sm text-muted-foreground">
-                {item}
-              </CardContent>
-            </Card>
+            <div key={item} className="border-t border-border pt-4 text-sm text-foreground">
+              {item}
+            </div>
           ))}
         </div>
       </section>
@@ -49,16 +46,12 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      <section className="mt-12">
-        <Card>
-          <CardContent className="space-y-2 p-6">
-            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground font-mono">
-              Контакты
-            </p>
-            <p className="text-sm text-muted-foreground">email: hello@zercon.systems</p>
-            <p className="text-sm text-muted-foreground">telegram: @zercon</p>
-          </CardContent>
-        </Card>
+      <section className="mt-12 border-t border-border pt-6">
+        <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground font-mono">
+          Контакты
+        </p>
+        <p className="mt-2 text-sm text-muted-foreground">email: hello@zercon.systems</p>
+        <p className="text-sm text-muted-foreground">telegram: @zercon</p>
       </section>
       </div>
     </div>

@@ -1,15 +1,7 @@
 import Link from "next/link";
 
 import { AnimatedIn } from "@/components/animated-in";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import {
   Accordion,
   AccordionContent,
@@ -22,91 +14,67 @@ export default function HomePage() {
   return (
     <div className="pb-20">
       <section className="section-surface">
-        <div className="container pt-24 md:pt-36 pb-20 md:pb-28">
+        <div className="container pt-28 md:pt-40 pb-20 md:pb-32">
           <AnimatedIn>
-            <div className="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:items-end">
-              <div className="space-y-10">
-                <p className="text-xs uppercase tracking-[0.6em] text-muted-foreground font-mono">
-                  Built from Zero Context
+            <div className="space-y-10">
+              <p className="text-xs uppercase tracking-[0.7em] text-muted-foreground font-mono">
+                Built from Zero Context
+              </p>
+              <div className="space-y-6">
+                <h1 className="text-6xl font-semibold tracking-tight md:text-8xl text-balance font-heading">
+                  Zercon
+                </h1>
+                <p className="text-2xl font-heading text-foreground">
+                  Systems without assumptions.
                 </p>
-                <div className="space-y-6">
-                  <h1 className="text-6xl font-semibold tracking-tight md:text-8xl text-balance font-heading">
-                    Zercon
-                  </h1>
-                  <div className="h-px w-24 bg-border" />
-                  <p className="text-lg text-muted-foreground text-pretty md:text-xl">
-                    Системы без предположений. Строгие критерии. Проверяемые модели.
-                  </p>
-                </div>
-                <div className="flex items-center gap-5">
-                  <Button asChild>
-                    <Link href="/contact">Запросить доступ</Link>
-                  </Button>
-                  <Link
-                    href="/products"
-                    className="text-xs uppercase tracking-[0.4em] text-muted-foreground hover:text-foreground"
-                  >
-                    Продукты
-                  </Link>
-                </div>
+                <p className="text-base text-muted-foreground md:text-lg">
+                  Инструменты для автоматизации и принятия решений.
+                </p>
               </div>
-              <div className="rounded-2xl border bg-background p-6">
-                <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                  <span>System status</span>
-                  <span>Live</span>
-                </div>
-                <div className="mt-6 space-y-6">
-                  <div className="h-28 rounded-xl border bg-muted/40" />
-                  <div className="grid gap-3 text-xs text-muted-foreground">
-                    <div className="flex items-center justify-between">
-                      <span>Модель</span>
-                      <span>v0.8</span>
-                    </div>
-                    <div className="h-px w-full bg-border" />
-                    <div className="flex items-center justify-between">
-                      <span>Критерии</span>
-                      <span>Зафиксированы</span>
-                    </div>
-                    <div className="h-px w-full bg-border" />
-                    <div className="flex items-center justify-between">
-                      <span>Гипотезы</span>
-                      <span>Проверка</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="flex items-center gap-6">
+                <Button asChild>
+                  <Link href="/contact">Получить ранний доступ</Link>
+                </Button>
+                <Link
+                  href="/products"
+                  className="text-xs uppercase tracking-[0.4em] text-muted-foreground hover:text-foreground"
+                >
+                  Смотреть продукты
+                </Link>
               </div>
+              <div className="h-px w-full bg-border" />
             </div>
           </AnimatedIn>
         </div>
       </section>
 
       <section className="section-muted mt-12 md:mt-16">
-        <div className="container py-12 md:py-16">
-        <AnimatedIn>
-          <div className="grid gap-4 md:grid-cols-3">
-            {[
-              {
-                title: "Ясность",
-                text: "Фиксируем критерии и понятные правила, прежде чем строить систему.",
-              },
-              {
-                title: "Устойчивость",
-                text: "Проверяем решения на устойчивость к шуму и изменениям в данных.",
-              },
-              {
-                title: "Масштаб",
-                text: "Создаем структуры, которые можно переносить между командами и рынками.",
-              },
-            ].map((item) => (
-              <Card key={item.title}>
-                <CardHeader className="space-y-3">
-                  <CardTitle>{item.title}</CardTitle>
-                  <CardDescription>{item.text}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
-          </div>
-        </AnimatedIn>
+        <div className="container py-16 md:py-24">
+          <AnimatedIn>
+            <div className="grid gap-8 md:grid-cols-3">
+              {[
+                {
+                  title: "Ясность",
+                  text: "Фиксируем критерии и правила до начала разработки.",
+                },
+                {
+                  title: "Устойчивость",
+                  text: "Проверяем решения на шум, ограничения и контекст.",
+                },
+                {
+                  title: "Масштаб",
+                  text: "Делаем модели, которые можно переносить между командами.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="space-y-3">
+                  <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground font-mono">
+                    {item.title}
+                  </p>
+                  <p className="text-base text-foreground">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </AnimatedIn>
         </div>
       </section>
 
@@ -116,54 +84,55 @@ export default function HomePage() {
           <div className="flex items-end justify-between gap-6">
             <div className="space-y-3">
               <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground font-mono">
-                Платформа
+                Products
               </p>
-              <h2 className="text-3xl font-semibold font-heading">Продуктовые модули</h2>
-              <p className="text-sm text-muted-foreground">
-                Два направления. Единая архитектура.
-              </p>
+              <h2 className="text-3xl font-semibold font-heading">Модули платформы</h2>
             </div>
             <Button variant="ghost" asChild>
               <Link href="/products">Все продукты</Link>
             </Button>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border bg-background p-6">
-              <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                <span>BotKit</span>
-                <span>Early access</span>
+          <div className="mt-12 grid gap-10 md:grid-cols-2">
+            {[
+              {
+                name: "BotKit",
+                status: "Early access",
+                line: "Конструктор Telegram-ботов без кода.",
+                uses: ["Запись и бронь", "FAQ и ответы", "Заявки и статусы"],
+                href: "/products/botkit",
+              },
+              {
+                name: "OptionMap",
+                status: "In development",
+                line: "Карта опциональности для решений.",
+                uses: ["Продуктовые ставки", "Стратегические выборы", "Опер. политики"],
+                href: "/products/optionmap",
+              },
+            ].map((product) => (
+              <div key={product.name} className="space-y-6">
+                <div className="flex items-center justify-between text-xs uppercase tracking-[0.4em] text-muted-foreground">
+                  <span>{product.name}</span>
+                  <span>{product.status}</span>
+                </div>
+                <div className="space-y-4">
+                  <p className="text-lg font-heading text-foreground">{product.line}</p>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    {product.uses.map((item) => (
+                      <div key={item} className="flex items-center gap-3">
+                        <span className="h-px w-6 bg-border" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link
+                    href={product.href}
+                    className="text-xs uppercase tracking-[0.4em] text-muted-foreground hover:text-foreground"
+                  >
+                    Подробнее
+                  </Link>
+                </div>
               </div>
-              <div className="mt-6 grid gap-6">
-                <div className="module-diagram h-24 rounded-lg border" />
-                <p className="text-sm text-muted-foreground">
-                  Конструктор Telegram-ботов. Один модуль — быстрый запуск сценариев.
-                </p>
-                <Link
-                  href="/products/botkit"
-                  className="text-xs uppercase tracking-[0.3em] text-muted-foreground hover:text-foreground"
-                >
-                  Подробнее
-                </Link>
-              </div>
-            </div>
-            <div className="rounded-2xl border bg-background p-6">
-              <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                <span>OptionMap</span>
-                <span>В разработке</span>
-              </div>
-              <div className="mt-6 grid gap-6">
-                <div className="module-map h-24 rounded-lg border" />
-                <p className="text-sm text-muted-foreground">
-                  Карта опциональности. Модуль для стратегических и продуктовых решений.
-                </p>
-                <Link
-                  href="/products/optionmap"
-                  className="text-xs uppercase tracking-[0.3em] text-muted-foreground hover:text-foreground"
-                >
-                  Подробнее
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
         </AnimatedIn>
         </div>
@@ -172,8 +141,13 @@ export default function HomePage() {
       <section className="section-contrast">
         <div className="container py-16 md:py-24">
         <AnimatedIn>
-          <h2 className="text-2xl font-semibold font-heading">Как мы работаем</h2>
-          <div className="mt-8 grid gap-4 md:grid-cols-4">
+          <div className="flex items-end justify-between gap-6">
+            <h2 className="text-2xl font-semibold font-heading">Как мы работаем</h2>
+            <span className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
+              Process
+            </span>
+          </div>
+          <div className="mt-10 grid gap-8 md:grid-cols-4">
             {[
               "Формулируем критерии",
               "Строим модель",
@@ -182,7 +156,7 @@ export default function HomePage() {
             ].map((step, index) => (
               <div
                 key={step}
-                className="rounded-lg border bg-background p-4 text-sm text-muted-foreground"
+                className="space-y-3 border-t border-border pt-4 text-sm text-muted-foreground"
               >
                 <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground font-mono">
                   0{index + 1}
@@ -244,20 +218,20 @@ export default function HomePage() {
       </section>
 
       <section className="section-muted">
-        <div className="container py-12 md:py-16">
+        <div className="container py-16 md:py-24">
         <AnimatedIn>
-          <div className="rounded-2xl border bg-background p-8 md:p-12">
-            <div className="grid gap-8 md:grid-cols-[1.1fr_1fr] md:items-center">
-              <div className="space-y-4">
-                <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground font-mono">
-                  Финальный запрос
-                </p>
-                <h2 className="text-2xl font-semibold font-heading">Расскажите о задаче</h2>
-                <p className="text-sm text-muted-foreground">
-                  Мы ответим с условиями пилота, сроками и требованиями к данным.
-                </p>
-              </div>
-              <LeadForm submitLabel="Отправить заявку" />
+          <div className="grid gap-10 md:grid-cols-[1.1fr_1fr] md:items-start">
+            <div className="space-y-4">
+              <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground font-mono">
+                Access
+              </p>
+              <h2 className="text-2xl font-semibold font-heading">Запрос доступа</h2>
+              <p className="text-sm text-muted-foreground">
+                Опишите задачу. Мы ответим с условиями пилота и критериями данных.
+              </p>
+            </div>
+            <div className="border-t border-border pt-6">
+              <LeadForm submitLabel="Отправить запрос" />
             </div>
           </div>
         </AnimatedIn>

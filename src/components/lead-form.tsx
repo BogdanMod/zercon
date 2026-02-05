@@ -91,12 +91,12 @@ export function LeadForm({
       className={cn("space-y-4", className)}
     >
       <div className="grid gap-2">
-        <label className="text-sm" htmlFor="name">
+        <label className="text-xs uppercase tracking-[0.3em] text-muted-foreground" htmlFor="name">
           Имя
         </label>
         <Input
           id="name"
-          placeholder="Ирина П."
+          placeholder="Имя и роль"
           autoComplete="name"
           {...register("name")}
         />
@@ -105,12 +105,12 @@ export function LeadForm({
         )}
       </div>
       <div className="grid gap-2">
-        <label className="text-sm" htmlFor="contact">
-          Email или Telegram
+        <label className="text-xs uppercase tracking-[0.3em] text-muted-foreground" htmlFor="contact">
+          Контакт
         </label>
         <Input
           id="contact"
-          placeholder="hello@company.ru или @telegram"
+          placeholder="email или @telegram"
           autoComplete="email"
           inputMode="email"
           {...register("contact")}
@@ -120,12 +120,12 @@ export function LeadForm({
         )}
       </div>
       <div className="grid gap-2">
-        <label className="text-sm" htmlFor="message">
-          Сообщение
+        <label className="text-xs uppercase tracking-[0.3em] text-muted-foreground" htmlFor="message">
+          Контекст
         </label>
         <Textarea
           id="message"
-          placeholder="Коротко о цели, сроках, масштабе."
+          placeholder="Цель, сроки, масштаб."
           {...register("message")}
         />
         {errors.message && (
