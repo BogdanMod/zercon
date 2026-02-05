@@ -22,31 +22,61 @@ export default function HomePage() {
   return (
     <div className="pb-20">
       <section className="section-surface">
-        <div className="container pt-20 md:pt-32 pb-16 md:pb-24">
-        <AnimatedIn>
-          <div className="max-w-4xl space-y-8">
-            <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground font-mono">
-              Built from Zero Context
-            </p>
-            <h1 className="text-5xl font-semibold tracking-tight md:text-7xl text-balance">
-              Zercon
-            </h1>
-            <p className="text-lg text-muted-foreground text-pretty md:text-xl">
-              Системы без предположений. Строгие критерии. Проверяемые модели.
-            </p>
-            <div className="flex items-center gap-4">
-              <Button asChild>
-                <Link href="/contact">Запросить доступ</Link>
-              </Button>
-              <Link
-                href="/products"
-                className="text-sm uppercase tracking-[0.3em] text-muted-foreground hover:text-foreground"
-              >
-                Продукты
-              </Link>
+        <div className="container pt-24 md:pt-36 pb-20 md:pb-28">
+          <AnimatedIn>
+            <div className="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:items-end">
+              <div className="space-y-10">
+                <p className="text-xs uppercase tracking-[0.6em] text-muted-foreground font-mono">
+                  Built from Zero Context
+                </p>
+                <div className="space-y-6">
+                  <h1 className="text-6xl font-semibold tracking-tight md:text-8xl text-balance">
+                    Zercon
+                  </h1>
+                  <div className="h-px w-24 bg-border" />
+                  <p className="text-lg text-muted-foreground text-pretty md:text-xl">
+                    Системы без предположений. Строгие критерии. Проверяемые модели.
+                  </p>
+                </div>
+                <div className="flex items-center gap-5">
+                  <Button asChild>
+                    <Link href="/contact">Запросить доступ</Link>
+                  </Button>
+                  <Link
+                    href="/products"
+                    className="text-xs uppercase tracking-[0.4em] text-muted-foreground hover:text-foreground"
+                  >
+                    Продукты
+                  </Link>
+                </div>
+              </div>
+              <div className="rounded-2xl border bg-background p-6">
+                <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                  <span>System status</span>
+                  <span>Live</span>
+                </div>
+                <div className="mt-6 space-y-6">
+                  <div className="h-28 rounded-xl border bg-muted/40" />
+                  <div className="grid gap-3 text-xs text-muted-foreground">
+                    <div className="flex items-center justify-between">
+                      <span>Модель</span>
+                      <span>v0.8</span>
+                    </div>
+                    <div className="h-px w-full bg-border" />
+                    <div className="flex items-center justify-between">
+                      <span>Критерии</span>
+                      <span>Зафиксированы</span>
+                    </div>
+                    <div className="h-px w-full bg-border" />
+                    <div className="flex items-center justify-between">
+                      <span>Гипотезы</span>
+                      <span>Проверка</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </AnimatedIn>
+          </AnimatedIn>
         </div>
       </section>
 
@@ -97,14 +127,14 @@ export default function HomePage() {
               <Link href="/products">Все продукты</Link>
             </Button>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border bg-background p-6">
               <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-muted-foreground">
                 <span>BotKit</span>
                 <span>Early access</span>
               </div>
               <div className="mt-6 grid gap-6">
-                <div className="h-20 rounded-lg border border-dashed border-muted-foreground/40 bg-muted/30" />
+                <div className="module-diagram h-24 rounded-lg border" />
                 <p className="text-sm text-muted-foreground">
                   Конструктор Telegram-ботов. Один модуль — быстрый запуск сценариев.
                 </p>
@@ -122,7 +152,7 @@ export default function HomePage() {
                 <span>В разработке</span>
               </div>
               <div className="mt-6 grid gap-6">
-                <div className="h-20 rounded-lg border border-dashed border-muted-foreground/40 bg-muted/30" />
+                <div className="module-map h-24 rounded-lg border" />
                 <p className="text-sm text-muted-foreground">
                   Карта опциональности. Модуль для стратегических и продуктовых решений.
                 </p>

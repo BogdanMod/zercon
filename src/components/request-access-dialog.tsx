@@ -23,7 +23,7 @@ export function RequestAccessDialog({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline">{label}</Button>
+        <Button>{label}</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
