@@ -58,31 +58,30 @@ export function SiteHeader() {
             </DialogTrigger>
             <DialogContent className="h-[100svh] w-full max-w-none rounded-none border-l border-t-0 border-r-0 border-b-0 p-0">
               <div className="flex h-full flex-col">
-                <div className="flex items-center justify-between border-b px-6 py-5">
+                <div className="flex items-center justify-between border-b px-6 py-6">
                   <DialogHeader>
-                    <DialogTitle className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
-                      Навигация
+                    <DialogTitle className="text-xs uppercase tracking-[0.6em] text-muted-foreground">
+                      Меню
                     </DialogTitle>
                   </DialogHeader>
-                  <ThemeToggle />
                 </div>
-                <div className="flex flex-1 flex-col justify-between px-6 py-10">
-                  <div className="space-y-6">
+                <div className="flex flex-1 flex-col justify-between px-6 py-12">
+                  <div className="space-y-8">
                     <Link
                       href="/products"
-                      className="block text-2xl font-heading text-foreground"
+                      className="block text-3xl font-heading tracking-tight text-foreground"
                     >
                       Продукты
                     </Link>
                     <Link
                       href="/about"
-                      className="block text-2xl font-heading text-foreground"
+                      className="block text-3xl font-heading tracking-tight text-foreground"
                     >
                       О компании
                     </Link>
                     <Link
                       href="/contact"
-                      className="block text-2xl font-heading text-foreground"
+                      className="block text-3xl font-heading tracking-tight text-foreground"
                     >
                       Контакты
                     </Link>
