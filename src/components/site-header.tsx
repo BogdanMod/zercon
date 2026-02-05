@@ -51,9 +51,9 @@ export function SiteHeader() {
               <Button
                 variant="outline"
                 size="sm"
-                className="md:hidden uppercase tracking-[0.3em]"
+                className="md:hidden uppercase tracking-[0.4em]"
               >
-                Меню
+                Menu
               </Button>
             </DialogTrigger>
             <DialogContent className="h-[100svh] w-full max-w-none rounded-none border-l border-t-0 border-r-0 border-b-0 p-0">
@@ -61,46 +61,44 @@ export function SiteHeader() {
                 <div className="flex items-center justify-between border-b px-6 py-6">
                   <DialogHeader>
                     <DialogTitle className="text-xs uppercase tracking-[0.6em] text-muted-foreground">
-                      Навигация
+                      Navigation
                     </DialogTitle>
                   </DialogHeader>
                 </div>
                 <div className="flex flex-1 flex-col justify-between px-6 py-12">
                   <div className="space-y-10">
-                    <p className="text-sm uppercase tracking-[0.5em] text-muted-foreground font-mono">
-                      ZERCON
-                    </p>
-                    <div className="space-y-6">
+                    <div className="space-y-8">
                       {[
-                        { href: "/products", label: "Продукты", index: "01" },
-                        { href: "/about", label: "О компании", index: "02" },
-                        { href: "/contact", label: "Контакты", index: "03" },
+                        { href: "/products", label: "Продукты" },
+                        { href: "/about", label: "О компании" },
+                        { href: "/contact", label: "Контакты" },
                       ].map((item) => (
                         <Link
                           key={item.href}
                           href={item.href}
                           className="group block"
                         >
-                          <div className="flex items-baseline justify-between">
-                            <span className="text-3xl font-heading tracking-tight text-foreground">
+                          <div className="flex items-center justify-between">
+                            <span className="text-4xl font-heading tracking-tight text-foreground">
                               {item.label}
                             </span>
                             <span className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
-                              {item.index}
+                              →
                             </span>
                           </div>
-                          <div className="mt-3 h-px w-full bg-border group-hover:bg-foreground/40" />
+                          <div className="mt-4 h-px w-full bg-border/70 group-hover:bg-foreground/40" />
                         </Link>
                       ))}
                     </div>
                   </div>
                   <div className="space-y-4">
-                    <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
-                      Доступ
-                    </p>
-                    <Button asChild className="w-full">
-                      <Link href="/contact">Запросить доступ</Link>
-                    </Button>
+                    <div className="h-px w-full bg-border" />
+                    <Link
+                      href="/contact"
+                      className="text-xs uppercase tracking-[0.4em] text-muted-foreground"
+                    >
+                      Запросить доступ
+                    </Link>
                   </div>
                 </div>
               </div>
