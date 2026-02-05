@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { AnimatedIn } from "@/components/animated-in";
+import { AnimatedHero, AnimatedIn, AnimatedProduct } from "@/components/animated-in";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -15,7 +15,7 @@ export default function HomePage() {
     <div className="pb-20">
       <section className="section-surface">
         <div className="container pt-28 md:pt-40 pb-20 md:pb-32">
-          <AnimatedIn>
+          <AnimatedHero>
             <div className="space-y-10">
               <p className="text-xs uppercase tracking-[0.7em] text-muted-foreground font-mono">
                 Built from Zero Context
@@ -44,7 +44,7 @@ export default function HomePage() {
               </div>
               <div className="h-px w-full bg-border" />
             </div>
-          </AnimatedIn>
+          </AnimatedHero>
         </div>
       </section>
 
@@ -109,7 +109,8 @@ export default function HomePage() {
                 href: "/products/optionmap",
               },
             ].map((product) => (
-              <div key={product.name} className="space-y-6">
+              <AnimatedProduct key={product.name}>
+                <div className="space-y-6">
                 <div className="flex items-center justify-between text-xs uppercase tracking-[0.4em] text-muted-foreground">
                   <span>{product.name}</span>
                   <span>{product.status}</span>
@@ -131,7 +132,7 @@ export default function HomePage() {
                     Подробнее
                   </Link>
                 </div>
-              </div>
+              </AnimatedProduct>
             ))}
           </div>
         </AnimatedIn>
