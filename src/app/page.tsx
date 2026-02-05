@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 import { AnimatedHero, AnimatedIn, AnimatedProduct } from "@/components/animated-in";
