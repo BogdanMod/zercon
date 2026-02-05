@@ -17,9 +17,9 @@ const leadSchema = z.object({
   name: z.string().min(2, "Укажите имя"),
   contact: z.string().min(3, "Укажите email или Telegram"),
   message: z.string().min(10, "Опишите задачу или контекст"),
-  consent: z.literal(true, {
-    errorMap: () => ({ message: "Нужно согласие с политикой" }),
-  }),
+  consent: z
+    .boolean()
+    .refine((value) => value === true, "Нужно согласие с политикой"),
   company: z.string().optional(),
 });
 
