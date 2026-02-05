@@ -61,33 +61,43 @@ export function SiteHeader() {
                 <div className="flex items-center justify-between border-b px-6 py-6">
                   <DialogHeader>
                     <DialogTitle className="text-xs uppercase tracking-[0.6em] text-muted-foreground">
-                      Меню
+                      Навигация
                     </DialogTitle>
                   </DialogHeader>
                 </div>
                 <div className="flex flex-1 flex-col justify-between px-6 py-12">
-                  <div className="space-y-8">
-                    <Link
-                      href="/products"
-                      className="block text-3xl font-heading tracking-tight text-foreground"
-                    >
-                      Продукты
-                    </Link>
-                    <Link
-                      href="/about"
-                      className="block text-3xl font-heading tracking-tight text-foreground"
-                    >
-                      О компании
-                    </Link>
-                    <Link
-                      href="/contact"
-                      className="block text-3xl font-heading tracking-tight text-foreground"
-                    >
-                      Контакты
-                    </Link>
+                  <div className="space-y-10">
+                    <p className="text-sm uppercase tracking-[0.5em] text-muted-foreground font-mono">
+                      ZERCON
+                    </p>
+                    <div className="space-y-6">
+                      {[
+                        { href: "/products", label: "Продукты", index: "01" },
+                        { href: "/about", label: "О компании", index: "02" },
+                        { href: "/contact", label: "Контакты", index: "03" },
+                      ].map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="group block"
+                        >
+                          <div className="flex items-baseline justify-between">
+                            <span className="text-3xl font-heading tracking-tight text-foreground">
+                              {item.label}
+                            </span>
+                            <span className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
+                              {item.index}
+                            </span>
+                          </div>
+                          <div className="mt-3 h-px w-full bg-border group-hover:bg-foreground/40" />
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                   <div className="space-y-4">
-                    <div className="h-px w-full bg-border" />
+                    <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
+                      Доступ
+                    </p>
                     <Button asChild className="w-full">
                       <Link href="/contact">Запросить доступ</Link>
                     </Button>
