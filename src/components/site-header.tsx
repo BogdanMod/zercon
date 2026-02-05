@@ -48,29 +48,52 @@ export function SiteHeader() {
           </div>
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant="outline" size="sm" className="md:hidden">
+              <Button
+                variant="outline"
+                size="sm"
+                className="md:hidden uppercase tracking-[0.3em]"
+              >
                 Меню
               </Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-md">
-              <DialogHeader>
-                <DialogTitle className="text-base uppercase tracking-[0.3em] text-muted-foreground">
-                  Навигация
-                </DialogTitle>
-              </DialogHeader>
-              <div className="grid gap-4 text-sm">
-                <Link href="/products" className="text-foreground">
-                  Продукты
-                </Link>
-                <Link href="/about" className="text-foreground">
-                  О компании
-                </Link>
-                <Link href="/contact" className="text-foreground">
-                  Контакты
-                </Link>
-                <Button asChild>
-                  <Link href="/contact">Запросить доступ</Link>
-                </Button>
+            <DialogContent className="h-[100svh] w-full max-w-none rounded-none border-l border-t-0 border-r-0 border-b-0 p-0">
+              <div className="flex h-full flex-col">
+                <div className="flex items-center justify-between border-b px-6 py-5">
+                  <DialogHeader>
+                    <DialogTitle className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
+                      Навигация
+                    </DialogTitle>
+                  </DialogHeader>
+                  <ThemeToggle />
+                </div>
+                <div className="flex flex-1 flex-col justify-between px-6 py-10">
+                  <div className="space-y-6">
+                    <Link
+                      href="/products"
+                      className="block text-2xl font-heading text-foreground"
+                    >
+                      Продукты
+                    </Link>
+                    <Link
+                      href="/about"
+                      className="block text-2xl font-heading text-foreground"
+                    >
+                      О компании
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="block text-2xl font-heading text-foreground"
+                    >
+                      Контакты
+                    </Link>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="h-px w-full bg-border" />
+                    <Button asChild className="w-full">
+                      <Link href="/contact">Запросить доступ</Link>
+                    </Button>
+                  </div>
+                </div>
               </div>
             </DialogContent>
           </Dialog>
