@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 224 18% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 224 18% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 18% 12%;
+  --primary: 224 18% 12%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 12% 95%;
+  --secondary-foreground: 224 18% 12%;
+  --muted: 220 10% 94%;
+  --muted-foreground: 224 10% 40%;
+  --accent: 210 50% 45%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 70% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 12% 90%;
+  --input: 220 12% 90%;
+  --ring: 210 50% 45%;
+  --radius: 14px;
+}
+
+.dark {
+  --background: 224 20% 8%;
+  --foreground: 0 0% 95%;
+  --card: 224 20% 10%;
+  --card-foreground: 0 0% 95%;
+  --popover: 224 20% 10%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 0 0% 95%;
+  --primary-foreground: 224 20% 10%;
+  --secondary: 224 14% 16%;
+  --secondary-foreground: 0 0% 95%;
+  --muted: 224 12% 14%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 210 55% 55%;
+  --accent-foreground: 224 20% 10%;
+  --destructive: 0 70% 45%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 224 14% 18%;
+  --input: 224 14% 18%;
+  --ring: 210 55% 55%;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-feature-settings: "liga" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+}
+
+.bg-grid {
+  background-image: linear-gradient(to right, hsl(var(--border) / 0.6) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--border) / 0.6) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.glow {
+  background: radial-gradient(700px circle at 50% 0%, hsl(var(--accent) / 0.18), transparent 60%);
+}
+
+::selection {
+  background: hsl(var(--accent) / 0.2);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+@media (max-width: 640px) {
+  .bg-grid {
+    background-size: 22px 22px;
+  }
+}
