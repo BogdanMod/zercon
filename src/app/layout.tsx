@@ -39,7 +39,7 @@ export default function RootLayout({
     <html lang="ru" suppressHydrationWarning>
       <body className="font-sans">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="min-h-screen bg-grid">
+          <div className="min-h-screen bg-grid grain">
             <div className="glow">
               <SiteHeader />
               <main>{children}</main>

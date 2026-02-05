@@ -13,9 +13,9 @@ import {
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur">
+    <header className="sticky top-0 z-40 w-full border-b bg-background/75 backdrop-blur">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="text-sm font-semibold tracking-[0.3em]">
+        <Link href="/" className="text-xs font-semibold tracking-[0.4em] text-muted-foreground">
           ZERCON
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">

@@ -22,26 +22,28 @@ export default function HomePage() {
   return (
     <div className="pb-20">
       <section className="section-surface">
-        <div className="container pt-14 md:pt-24">
+        <div className="container pt-20 md:pt-32 pb-16 md:pb-24">
         <AnimatedIn>
-          <div className="max-w-3xl space-y-6">
-            <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground font-mono">
+          <div className="max-w-4xl space-y-8">
+            <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground font-mono">
               Built from Zero Context
             </p>
-            <h1 className="text-4xl font-semibold tracking-tight md:text-6xl text-balance">
+            <h1 className="text-5xl font-semibold tracking-tight md:text-7xl text-balance">
               Zercon
             </h1>
-            <p className="text-lg text-muted-foreground text-pretty">
-              Системы без предположений. Мы фиксируем критерии, строим модели и
-              проверяем их на реальности.
+            <p className="text-lg text-muted-foreground text-pretty md:text-xl">
+              Системы без предположений. Строгие критерии. Проверяемые модели.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex items-center gap-4">
               <Button asChild>
                 <Link href="/contact">Запросить доступ</Link>
               </Button>
-              <Button variant="outline" asChild>
-                <Link href="/products">Посмотреть продукты</Link>
-              </Button>
+              <Link
+                href="/products"
+                className="text-sm uppercase tracking-[0.3em] text-muted-foreground hover:text-foreground"
+              >
+                Продукты
+              </Link>
             </div>
           </div>
         </AnimatedIn>
@@ -79,54 +81,66 @@ export default function HomePage() {
       </section>
 
       <section className="section-surface">
-        <div className="container py-12 md:py-16">
+        <div className="container py-16 md:py-24">
         <AnimatedIn>
-          <div className="flex items-center justify-between">
-            <div>
-              <h2 className="text-2xl font-semibold">Продукты</h2>
+          <div className="flex items-end justify-between gap-6">
+            <div className="space-y-3">
+              <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground font-mono">
+                Платформа
+              </p>
+              <h2 className="text-3xl font-semibold">Продуктовые модули</h2>
               <p className="text-sm text-muted-foreground">
-                Два направления. Оба в активной разработке.
+                Два направления. Единая архитектура.
               </p>
             </div>
             <Button variant="ghost" asChild>
               <Link href="/products">Все продукты</Link>
             </Button>
           </div>
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {[
-              {
-                title: "BotKit",
-                text: "Конструктор Telegram-ботов для малого бизнеса. Без кода. Быстрый запуск.",
-                href: "/products/botkit",
-              },
-              {
-                title: "OptionMap",
-                text: "Карта опциональности для стратегических и продуктовых решений.",
-                href: "/products/optionmap",
-              },
-            ].map((item) => (
-              <Card key={item.title}>
-                <CardHeader className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <CardTitle>{item.title}</CardTitle>
-                    <Badge variant="outline">В разработке</Badge>
-                  </div>
-                  <CardDescription>{item.text}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button variant="outline" asChild>
-                    <Link href={item.href}>Подробнее</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border bg-background p-6">
+              <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                <span>BotKit</span>
+                <span>Early access</span>
+              </div>
+              <div className="mt-6 grid gap-6">
+                <div className="h-20 rounded-lg border border-dashed border-muted-foreground/40 bg-muted/30" />
+                <p className="text-sm text-muted-foreground">
+                  Конструктор Telegram-ботов. Один модуль — быстрый запуск сценариев.
+                </p>
+                <Link
+                  href="/products/botkit"
+                  className="text-xs uppercase tracking-[0.3em] text-muted-foreground hover:text-foreground"
+                >
+                  Подробнее
+                </Link>
+              </div>
+            </div>
+            <div className="rounded-2xl border bg-background p-6">
+              <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                <span>OptionMap</span>
+                <span>В разработке</span>
+              </div>
+              <div className="mt-6 grid gap-6">
+                <div className="h-20 rounded-lg border border-dashed border-muted-foreground/40 bg-muted/30" />
+                <p className="text-sm text-muted-foreground">
+                  Карта опциональности. Модуль для стратегических и продуктовых решений.
+                </p>
+                <Link
+                  href="/products/optionmap"
+                  className="text-xs uppercase tracking-[0.3em] text-muted-foreground hover:text-foreground"
+                >
+                  Подробнее
+                </Link>
+              </div>
+            </div>
           </div>
         </AnimatedIn>
         </div>
       </section>
 
       <section className="section-contrast">
-        <div className="container py-12 md:py-16">
+        <div className="container py-16 md:py-24">
         <AnimatedIn>
           <h2 className="text-2xl font-semibold">Как мы работаем</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-4">
