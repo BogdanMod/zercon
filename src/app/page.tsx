@@ -21,7 +21,8 @@ import { LeadForm } from "@/components/lead-form";
 export default function HomePage() {
   return (
     <div className="pb-20">
-      <section className="container pt-14 md:pt-24">
+      <section className="section-surface">
+        <div className="container pt-14 md:pt-24">
         <AnimatedIn>
           <div className="max-w-3xl space-y-6">
             <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground font-mono">
@@ -44,9 +45,11 @@ export default function HomePage() {
             </div>
           </div>
         </AnimatedIn>
+        </div>
       </section>
 
-      <section className="container mt-16 md:mt-20">
+      <section className="section-muted mt-12 md:mt-16">
+        <div className="container py-12 md:py-16">
         <AnimatedIn>
           <div className="grid gap-4 md:grid-cols-3">
             {[
@@ -72,9 +75,11 @@ export default function HomePage() {
             ))}
           </div>
         </AnimatedIn>
+        </div>
       </section>
 
-      <section className="container mt-16 md:mt-20">
+      <section className="section-surface">
+        <div className="container py-12 md:py-16">
         <AnimatedIn>
           <div className="flex items-center justify-between">
             <div>
@@ -117,9 +122,11 @@ export default function HomePage() {
             ))}
           </div>
         </AnimatedIn>
+        </div>
       </section>
 
-      <section className="container mt-16 md:mt-20">
+      <section className="section-contrast">
+        <div className="container py-12 md:py-16">
         <AnimatedIn>
           <h2 className="text-2xl font-semibold">Как мы работаем</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-4">
@@ -141,9 +148,11 @@ export default function HomePage() {
             ))}
           </div>
         </AnimatedIn>
+        </div>
       </section>
 
-      <section className="container mt-16 md:mt-20">
+      <section className="section-surface">
+        <div className="container py-12 md:py-16">
         <AnimatedIn>
           <h2 className="text-2xl font-semibold">FAQ</h2>
           <Accordion type="single" collapsible className="mt-6">
@@ -187,9 +196,11 @@ export default function HomePage() {
             </AccordionItem>
           </Accordion>
         </AnimatedIn>
+        </div>
       </section>
 
-      <section className="container mt-16 md:mt-20">
+      <section className="section-muted">
+        <div className="container py-12 md:py-16">
         <AnimatedIn>
           <div className="rounded-2xl border bg-background p-8 md:p-12">
             <div className="grid gap-8 md:grid-cols-[1.1fr_1fr] md:items-center">
@@ -206,6 +217,7 @@ export default function HomePage() {
             </div>
           </div>
         </AnimatedIn>
+        </div>
       </section>
     </div>
   );

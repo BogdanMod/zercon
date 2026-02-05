@@ -7,8 +7,9 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="container py-16">
-      <div className="max-w-2xl space-y-4">
+    <div className="section-surface">
+      <div className="container py-16">
+        <div className="max-w-2xl space-y-4">
         <h1 className="text-3xl font-semibold">Политика конфиденциальности</h1>
         <p className="text-sm text-muted-foreground">
           Мы собираем только те данные, которые вы отправляете через формы на
@@ -25,6 +26,7 @@ export default function PrivacyPage() {
         <p className="text-sm text-muted-foreground">
           Если у вас есть вопросы, напишите на hello@zercon.systems.
         </p>
+      </div>
       </div>
     </div>
   );

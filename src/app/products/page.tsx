@@ -37,8 +37,9 @@ const products = [
 
 export default function ProductsPage() {
   return (
-    <div className="container py-16">
-      <div className="max-w-2xl space-y-3">
+    <div className="section-surface">
+      <div className="container py-16">
+        <div className="max-w-2xl space-y-3">
         <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground font-mono">
           Каталог
         </p>
@@ -48,7 +49,7 @@ export default function ProductsPage() {
         </p>
       </div>
 
-      <Tabs defaultValue="list" className="mt-10">
+        <Tabs defaultValue="list" className="mt-10">
         <TabsList className="w-full justify-start gap-2 overflow-x-auto">
           <TabsTrigger value="list">Список</TabsTrigger>
           <TabsTrigger value="compare">Сравнение</TabsTrigger>
@@ -115,7 +116,8 @@ export default function ProductsPage() {
             </div>
           </div>
         </TabsContent>
-      </Tabs>
+        </Tabs>
+      </div>
     </div>
   );
 }

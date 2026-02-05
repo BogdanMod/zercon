@@ -10,8 +10,9 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="container py-16">
-      <div className="max-w-3xl space-y-4">
+    <div className="section-surface">
+      <div className="container py-16">
+        <div className="max-w-3xl space-y-4">
         <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground font-mono">
           Zero Context Systems
         </p>
@@ -57,6 +58,7 @@ export default function AboutPage() {
           </CardContent>
         </Card>
       </section>
+      </div>
     </div>
   );
 }

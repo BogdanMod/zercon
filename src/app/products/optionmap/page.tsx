@@ -19,7 +19,8 @@ export const metadata: Metadata = {
 
 export default function OptionMapPage() {
   return (
-    <div className="container py-16">
+    <div className="section-surface">
+      <div className="container py-16">
       <div className="flex items-center justify-between">
         <div className="space-y-3">
           <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground font-mono">
@@ -113,6 +114,7 @@ export default function OptionMapPage() {
           </CardContent>
         </Card>
       </section>
+      </div>
     </div>
   );
 }
