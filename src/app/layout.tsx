@@ -1,9 +1,29 @@
 import type { Metadata } from "next";
+import { DM_Serif_Display, IBM_Plex_Sans, Space_Grotesk } from "next/font/google";
+
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Toaster } from "sonner";
+
+const plexSans = IBM_Plex_Sans({
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-sans",
+  weight: ["300", "400", "500", "600"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  weight: ["400", "500", "600", "700"],
+});
+
+const dmSerif = DM_Serif_Display({
+  subsets: ["latin"],
+  variable: "--font-brand",
+  weight: ["400"],
+});
 
 
 export const metadata: Metadata = {
@@ -37,7 +57,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru" suppressHydrationWarning>
-      <body className="font-sans">
+      <body
+        className={`${plexSans.variable} ${spaceGrotesk.variable} ${dmSerif.variable} font-sans`}
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="min-h-screen bg-grid grain">
             <div className="glow">

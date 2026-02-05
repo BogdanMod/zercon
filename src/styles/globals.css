@@ -113,6 +113,10 @@ body {
   background: hsl(var(--secondary) / 0.8);
 }
 
+.footer-surface {
+  background: hsl(var(--secondary) / 0.9);
+}
+
 .section-surface {
   background: hsl(var(--background));
 }

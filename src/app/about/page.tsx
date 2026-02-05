@@ -16,7 +16,9 @@ export default function AboutPage() {
         <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground font-mono">
           Zero Context Systems
         </p>
-        <h1 className="text-3xl font-semibold text-balance">О компании</h1>
+        <h1 className="text-3xl font-semibold text-balance font-heading">
+          О компании
+        </h1>
         <p className="text-sm text-muted-foreground text-pretty">
           Zercon — это Zero Context Systems. Мы строим системы из первых
           принципов. Уважение к ограничениям, ясность критериев, измеримость
@@ -25,7 +27,7 @@ export default function AboutPage() {
       </div>
 
       <section className="mt-10">
-        <h2 className="text-xl font-semibold">Принципы</h2>
+        <h2 className="text-xl font-semibold font-heading">Принципы</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           {["First principles", "Ясность", "Измеримость"].map((item) => (
             <Card key={item}>
@@ -38,7 +40,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="text-xl font-semibold">Почему Zercon</h2>
+        <h2 className="text-xl font-semibold font-heading">Почему Zercon</h2>
         <ul className="mt-6 grid gap-3 text-sm text-muted-foreground md:grid-cols-2">
           <li>Фокус на критериях, не на презентациях.</li>
           <li>Минимальные допущения, максимальная проверяемость.</li>

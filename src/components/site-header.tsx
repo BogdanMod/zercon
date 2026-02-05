@@ -15,17 +15,29 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/75 backdrop-blur">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="text-xs font-semibold tracking-[0.4em] text-muted-foreground">
-          ZERCON
+        <Link
+          href="/"
+          className="text-lg font-brand tracking-[0.06em] text-foreground"
+        >
+          Zercon
         </Link>
-        <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
-          <Link href="/products" className="transition-colors hover:text-foreground">
+        <nav className="hidden items-center gap-2 rounded-full border px-3 py-1 text-xs uppercase tracking-[0.3em] text-muted-foreground md:flex">
+          <Link
+            href="/products"
+            className="rounded-full px-3 py-2 transition-colors hover:bg-muted hover:text-foreground"
+          >
             Продукты
           </Link>
-          <Link href="/about" className="transition-colors hover:text-foreground">
+          <Link
+            href="/about"
+            className="rounded-full px-3 py-2 transition-colors hover:bg-muted hover:text-foreground"
+          >
             О компании
           </Link>
-          <Link href="/contact" className="transition-colors hover:text-foreground">
+          <Link
+            href="/contact"
+            className="rounded-full px-3 py-2 transition-colors hover:bg-muted hover:text-foreground"
+          >
             Контакты
           </Link>
         </nav>

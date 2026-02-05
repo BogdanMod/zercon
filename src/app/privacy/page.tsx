@@ -10,7 +10,9 @@ export default function PrivacyPage() {
     <div className="section-surface">
       <div className="container py-16">
         <div className="max-w-2xl space-y-4">
-        <h1 className="text-3xl font-semibold">Политика конфиденциальности</h1>
+        <h1 className="text-3xl font-semibold font-heading">
+          Политика конфиденциальности
+        </h1>
         <p className="text-sm text-muted-foreground">
           Мы собираем только те данные, которые вы отправляете через формы на
           сайте: имя, контакт и сообщение.

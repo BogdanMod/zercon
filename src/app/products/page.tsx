@@ -43,7 +43,9 @@ export default function ProductsPage() {
         <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground font-mono">
           Каталог
         </p>
-        <h1 className="text-3xl font-semibold text-balance">Продукты</h1>
+        <h1 className="text-3xl font-semibold text-balance font-heading">
+          Продукты
+        </h1>
         <p className="text-sm text-muted-foreground text-pretty">
           Два продукта с общим подходом: сначала критерии, затем реализация.
         </p>

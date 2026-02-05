@@ -2,10 +2,12 @@ import Link from "next/link";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t py-10">
+    <footer className="border-t py-12 footer-surface">
       <div className="container flex flex-col gap-6 text-xs uppercase tracking-[0.3em] text-muted-foreground md:flex-row md:items-center md:justify-between">
         <div className="space-y-2">
-          <p className="text-foreground tracking-[0.4em]">ZERCON</p>
+          <p className="text-foreground tracking-[0.08em] font-brand text-lg">
+            Zercon
+          </p>
           <p className="text-xs normal-case tracking-normal">
             Zero Context Systems
           </p>

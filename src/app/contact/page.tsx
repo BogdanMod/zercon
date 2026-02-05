@@ -16,7 +16,9 @@ export default function ContactPage() {
         <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground font-mono">
           Связь
         </p>
-        <h1 className="text-3xl font-semibold text-balance">Контакты</h1>
+        <h1 className="text-3xl font-semibold text-balance font-heading">
+          Контакты
+        </h1>
         <p className="text-sm text-muted-foreground text-pretty">
           Оставьте заявку, и мы свяжемся с вами. Или используйте прямые контакты.
         </p>

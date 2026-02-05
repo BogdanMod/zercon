@@ -30,7 +30,7 @@ export default function HomePage() {
                   Built from Zero Context
                 </p>
                 <div className="space-y-6">
-                  <h1 className="text-6xl font-semibold tracking-tight md:text-8xl text-balance">
+                  <h1 className="text-6xl font-semibold tracking-tight md:text-8xl text-balance font-heading">
                     Zercon
                   </h1>
                   <div className="h-px w-24 bg-border" />
@@ -118,7 +118,7 @@ export default function HomePage() {
               <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground font-mono">
                 Платформа
               </p>
-              <h2 className="text-3xl font-semibold">Продуктовые модули</h2>
+              <h2 className="text-3xl font-semibold font-heading">Продуктовые модули</h2>
               <p className="text-sm text-muted-foreground">
                 Два направления. Единая архитектура.
               </p>
@@ -172,7 +172,7 @@ export default function HomePage() {
       <section className="section-contrast">
         <div className="container py-16 md:py-24">
         <AnimatedIn>
-          <h2 className="text-2xl font-semibold">Как мы работаем</h2>
+          <h2 className="text-2xl font-semibold font-heading">Как мы работаем</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-4">
             {[
               "Формулируем критерии",
@@ -198,7 +198,7 @@ export default function HomePage() {
       <section className="section-surface">
         <div className="container py-12 md:py-16">
         <AnimatedIn>
-          <h2 className="text-2xl font-semibold">FAQ</h2>
+          <h2 className="text-2xl font-semibold font-heading">FAQ</h2>
           <Accordion type="single" collapsible className="mt-6">
             <AccordionItem value="item-1">
               <AccordionTrigger>Как получить доступ к продуктам?</AccordionTrigger>
@@ -252,7 +252,7 @@ export default function HomePage() {
                 <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground font-mono">
                   Финальный запрос
                 </p>
-                <h2 className="text-2xl font-semibold">Расскажите о задаче</h2>
+                <h2 className="text-2xl font-semibold font-heading">Расскажите о задаче</h2>
                 <p className="text-sm text-muted-foreground">
                   Мы ответим с условиями пилота, сроками и требованиями к данным.
                 </p>

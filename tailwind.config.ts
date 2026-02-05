@@ -19,6 +19,8 @@ const config: Config = {
           "Source Sans 3",
           "sans-serif",
         ],
+        heading: ["var(--font-heading)", "IBM Plex Sans", "sans-serif"],
+        brand: ["var(--font-brand)", "serif"],
         mono: [
           "IBM Plex Mono",
           "JetBrains Mono",

@@ -27,7 +27,7 @@ export default function OptionMapPage() {
             Продукт
           </p>
           <div className="flex items-center gap-3">
-            <h1 className="text-3xl font-semibold">OptionMap</h1>
+            <h1 className="text-3xl font-semibold font-heading">OptionMap</h1>
             <Badge variant="outline">В разработке</Badge>
           </div>
           <p className="max-w-2xl text-sm text-muted-foreground text-pretty">
@@ -41,7 +41,7 @@ export default function OptionMapPage() {
       </div>
 
       <section className="mt-12">
-        <h2 className="text-xl font-semibold">Сценарии</h2>
+        <h2 className="text-xl font-semibold font-heading">Сценарии</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           {[
             {
@@ -68,7 +68,7 @@ export default function OptionMapPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="text-xl font-semibold">Фичи</h2>
+        <h2 className="text-xl font-semibold font-heading">Фичи</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           {[
             "Граф состояний",
