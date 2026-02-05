@@ -111,26 +111,27 @@ export default function HomePage() {
             ].map((product) => (
               <AnimatedProduct key={product.name}>
                 <div className="space-y-6">
-                <div className="flex items-center justify-between text-xs uppercase tracking-[0.4em] text-muted-foreground">
-                  <span>{product.name}</span>
-                  <span>{product.status}</span>
-                </div>
-                <div className="space-y-4">
-                  <p className="text-lg font-heading text-foreground">{product.line}</p>
-                  <div className="space-y-2 text-sm text-muted-foreground">
-                    {product.uses.map((item) => (
-                      <div key={item} className="flex items-center gap-3">
-                        <span className="h-px w-6 bg-border" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
+                  <div className="flex items-center justify-between text-xs uppercase tracking-[0.4em] text-muted-foreground">
+                    <span>{product.name}</span>
+                    <span>{product.status}</span>
                   </div>
-                  <Link
-                    href={product.href}
-                    className="text-xs uppercase tracking-[0.4em] text-muted-foreground hover:text-foreground"
-                  >
-                    Подробнее
-                  </Link>
+                  <div className="space-y-4">
+                    <p className="text-lg font-heading text-foreground">{product.line}</p>
+                    <div className="space-y-2 text-sm text-muted-foreground">
+                      {product.uses.map((item) => (
+                        <div key={item} className="flex items-center gap-3">
+                          <span className="h-px w-6 bg-border" />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <Link
+                      href={product.href}
+                      className="text-xs uppercase tracking-[0.4em] text-muted-foreground hover:text-foreground"
+                    >
+                      Подробнее
+                    </Link>
+                  </div>
                 </div>
               </AnimatedProduct>
             ))}
