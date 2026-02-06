@@ -1,50 +1,23 @@
-<!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Zercon — Продукты</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <nav class="nav">
-        <div class="logo">Zercon</div>
-        <div class="nav-links">
-          <a href="../#what">Что мы делаем</a>
-          <a href="../#products">Продукты</a>
-          <a href="../#process">Как мы работаем</a>
-          <a href="../#faq">FAQ</a>
-        </div>
-        <div class="nav-actions">
-          <a class="text-link" href="../about/">О компании</a>
-          <a class="button primary" href="../contact/">Контакты</a>
-        </div>
-      </nav>
-    </header>
+import Link from "next/link";
 
-    <main>
-      <section class="page-hero">
+export default function ProductsPage() {
+  return (
+    <>
+      <section className="page-hero">
         <h1>Продукты Zercon</h1>
         <p>Два инструмента, которые помогают запускать решения без предположений.</p>
       </section>
 
-      <section class="section light">
-        <div class="section-head">
+      <section className="section light">
+        <div className="section-head">
           <h2>Краткий обзор</h2>
           <p>Оба продукта — в разработке, доступ выдаётся по запросу.</p>
         </div>
-        <div class="list-grid">
-          <div class="list-card">
-            <div class="product-title">
+        <div className="list-grid">
+          <div className="list-card">
+            <div className="product-title">
               <h3>BotKit</h3>
-              <span class="pill ghost">В разработке</span>
+              <span className="pill ghost">В разработке</span>
             </div>
             <p>Конструктор Telegram-ботов для малого бизнеса. Без кода. Быстрый запуск.</p>
             <ul>
@@ -53,10 +26,10 @@
               <li>Понятные сценарии общения</li>
             </ul>
           </div>
-          <div class="list-card">
-            <div class="product-title">
+          <div className="list-card">
+            <div className="product-title">
               <h3>OptionMap</h3>
-              <span class="pill ghost">В разработке</span>
+              <span className="pill ghost">В разработке</span>
             </div>
             <p>Карта опциональности, где решения делают будущее уже или оставляют варианты.</p>
             <ul>
@@ -68,12 +41,12 @@
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-head">
+      <section className="section">
+        <div className="section-head">
           <h2>Сравнение</h2>
           <p>Быстрое понимание отличий по ключевым параметрам.</p>
         </div>
-        <table class="comparison">
+        <table className="comparison">
           <thead>
             <tr>
               <th>Параметр</th>
@@ -106,13 +79,13 @@
         </table>
       </section>
 
-      <section class="section light">
-        <div class="section-head">
+      <section className="section light">
+        <div className="section-head">
           <h2>BotKit</h2>
           <p>Конструктор Telegram-ботов для малого бизнеса. Без кода. Быстрый запуск.</p>
         </div>
-        <div class="list-grid">
-          <div class="list-card">
+        <div className="list-grid">
+          <div className="list-card">
             <h3>Сценарии</h3>
             <ul>
               <li>Запись и бронь</li>
@@ -120,41 +93,43 @@
               <li>Заявки и оплата (интеграции в планах)</li>
             </ul>
           </div>
-          <div class="list-card">
+          <div className="list-card">
             <h3>Фичи</h3>
-            <div class="feature-grid">
-              <div class="feature-tile">Визуальные блоки</div>
-              <div class="feature-tile">Шаблоны</div>
-              <div class="feature-tile">Переменные</div>
-              <div class="feature-tile">Сегментация</div>
-              <div class="feature-tile">Аналитика</div>
-              <div class="feature-tile">Роли и доступ</div>
+            <div className="feature-grid">
+              <div className="feature-tile">Визуальные блоки</div>
+              <div className="feature-tile">Шаблоны</div>
+              <div className="feature-tile">Переменные</div>
+              <div className="feature-tile">Сегментация</div>
+              <div className="feature-tile">Аналитика</div>
+              <div className="feature-tile">Роли и доступ</div>
             </div>
           </div>
         </div>
-        <div class="list-card" style="margin-top: 24px">
+        <div className="list-card" style={{ marginTop: "24px" }}>
           <h3>Дорожная карта</h3>
-          <div class="roadmap">
-            <div class="roadmap-item">Q1 — интеграции оплат</div>
-            <div class="roadmap-item">Q2 — marketplace шаблонов</div>
-            <div class="roadmap-item">Q3 — A/B сценарии</div>
+          <div className="roadmap">
+            <div className="roadmap-item">Q1 — интеграции оплат</div>
+            <div className="roadmap-item">Q2 — marketplace шаблонов</div>
+            <div className="roadmap-item">Q3 — A/B сценарии</div>
           </div>
-          <div style="margin-top: 16px">
-            <a class="button primary" href="../contact/">Запросить ранний доступ</a>
+          <div style={{ marginTop: "16px" }}>
+            <Link className="button primary" href="/contact">
+              Запросить ранний доступ
+            </Link>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-head">
+      <section className="section">
+        <div className="section-head">
           <h2>OptionMap</h2>
           <p>
             Карта опциональности: модель, которая показывает где решения делают будущее уже, а где
             оставляют варианты.
           </p>
         </div>
-        <div class="list-grid">
-          <div class="list-card">
+        <div className="list-grid">
+          <div className="list-card">
             <h3>Сценарии</h3>
             <ul>
               <li>Продуктовые решения</li>
@@ -162,37 +137,28 @@
               <li>Операционные политики</li>
             </ul>
           </div>
-          <div class="list-card">
+          <div className="list-card">
             <h3>Фичи</h3>
-            <div class="feature-grid">
-              <div class="feature-tile">Граф состояний</div>
-              <div class="feature-tile">Критерии событий</div>
-              <div class="feature-tile">Вероятностные окна</div>
-              <div class="feature-tile">Триггеры</div>
-              <div class="feature-tile">Журнал решений</div>
-              <div class="feature-tile">Экспорт отчёта</div>
+            <div className="feature-grid">
+              <div className="feature-tile">Граф состояний</div>
+              <div className="feature-tile">Критерии событий</div>
+              <div className="feature-tile">Вероятностные окна</div>
+              <div className="feature-tile">Триггеры</div>
+              <div className="feature-tile">Журнал решений</div>
+              <div className="feature-tile">Экспорт отчёта</div>
             </div>
           </div>
         </div>
-        <div class="notice" style="margin-top: 20px">
+        <div className="notice" style={{ marginTop: "20px" }}>
           Важно: OptionMap — инструмент поддержки решений, он не гарантирует точность прогнозов.
         </div>
-        <div style="margin-top: 16px">
-          <a class="button primary" href="../contact/">Запросить демо</a>
+        <div style={{ marginTop: "16px" }}>
+          <Link className="button primary" href="/contact">
+            Запросить демо
+          </Link>
         </div>
       </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-bottom">
-        <span>Zercon. Системы без предположений.</span>
-        <div class="footer-actions">
-          <a class="button ghost" href="../">На главную</a>
-          <a class="button primary" href="../contact/">Связаться</a>
-        </div>
-      </div>
-    </footer>
-    <script src="../script.js"></script>
-  </body>
-</html>
+    </>
+  );
+}
 
