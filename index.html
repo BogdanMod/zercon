@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zercon — Системы без предположений</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <div class="logo">Zercon</div>
+        <div class="nav-links">
+          <a href="#what">Что мы делаем</a>
+          <a href="#products">Продукты</a>
+          <a href="#process">Как мы работаем</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="nav-actions">
+          <a class="text-link" href="./products/">Продукты</a>
+          <a class="text-link" href="./about/">О компании</a>
+          <a class="button primary" href="./contact/">Контакты</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-content">
+          <p class="hero-kicker">Zercon</p>
+          <h1>Системы без предположений.</h1>
+          <p class="hero-subtitle">Мы строим продуктовые системы и модели, которые заменяют догадки измерениями.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="./contact/">Запросить доступ</a>
+            <a class="button ghost" href="./products/">Посмотреть продукты</a>
+          </div>
+          <p class="hero-meta">Прозрачные критерии, измеримые результаты, ответственность за решения.</p>
+        </div>
+        <div class="hero-visual">
+          <div class="glass-card">
+            <div class="card-title">Zercon Platform</div>
+            <p>Инструменты для системного принятия решений и быстрых запусков.</p>
+            <div class="chip-row">
+              <span class="chip">BotKit</span>
+              <span class="chip">OptionMap</span>
+              <span class="chip">Research</span>
+            </div>
+          </div>
+          <div class="flow-board" aria-label="Модель решений">
+            <div class="flow-title">OptionMap · Живая модель</div>
+            <svg viewBox="0 0 520 300" role="img" aria-hidden="true">
+              <defs>
+                <linearGradient id="nodeGrad" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#7b5cff" />
+                  <stop offset="100%" stop-color="#ff86c8" />
+                </linearGradient>
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <rect x="40" y="60" width="140" height="64" rx="14" fill="#0f131d" stroke="#2b3140" />
+              <rect x="210" y="20" width="140" height="64" rx="14" fill="#0f131d" stroke="#2b3140" />
+              <rect x="210" y="140" width="140" height="64" rx="14" fill="#0f131d" stroke="#2b3140" />
+              <rect x="380" y="92" width="100" height="64" rx="14" fill="#0f131d" stroke="#2b3140" />
+
+              <path class="flow-line" d="M180 92 L210 52" />
+              <path class="flow-line" d="M180 92 L210 172" />
+              <path class="flow-line" d="M350 52 L380 124" />
+              <path class="flow-line" d="M350 172 L380 124" />
+
+              <circle class="flow-node" cx="180" cy="92" r="6" fill="url(#nodeGrad)" filter="url(#glow)" />
+              <circle class="flow-node" cx="210" cy="52" r="6" fill="url(#nodeGrad)" filter="url(#glow)" />
+              <circle class="flow-node" cx="210" cy="172" r="6" fill="url(#nodeGrad)" filter="url(#glow)" />
+              <circle class="flow-node" cx="380" cy="124" r="6" fill="url(#nodeGrad)" filter="url(#glow)" />
+
+              <text x="70" y="98" fill="#e8eaf0" font-size="13" font-weight="600">Вариант A</text>
+              <text x="240" y="56" fill="#e8eaf0" font-size="13" font-weight="600">Вариант B</text>
+              <text x="240" y="176" fill="#e8eaf0" font-size="13" font-weight="600">Вариант C</text>
+              <text x="400" y="128" fill="#e8eaf0" font-size="13" font-weight="600">Фиксация</text>
+            </svg>
+          </div>
+          <div class="gradient-orb"></div>
+        </div>
+      </section>
+
+      <section class="section" id="what">
+        <div class="section-head">
+          <h2>Что мы делаем</h2>
+          <p>Переводим продуктовые решения в проверяемые системы с понятными критериями успеха.</p>
+        </div>
+        <div class="three-col">
+          <div class="feature">
+            <div class="feature-icon gradient-1"></div>
+            <h3>Снижаем неопределенность</h3>
+            <p>Фиксируем гипотезы и превращаем их в измеримые эксперименты.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon gradient-2"></div>
+            <h3>Ускоряем запуск</h3>
+            <p>Выстраиваем процесс от идеи до результата без потери качества.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon gradient-3"></div>
+            <h3>Делаем решения прозрачными</h3>
+            <p>Отчеты и модели показывают, почему выбран именно этот путь.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section light" id="products">
+        <div class="section-head">
+          <h2>Продукты</h2>
+          <p>Два ключевых направления, которые уже в разработке.</p>
+        </div>
+        <div class="product-grid">
+          <div class="product-card">
+            <div class="product-title">
+              <h3>BotKit</h3>
+              <span class="pill ghost">В разработке</span>
+            </div>
+            <p>Конструктор Telegram-ботов для малого бизнеса. Без кода. Быстрый запуск.</p>
+            <a class="text-link" href="./products/">Подробнее →</a>
+          </div>
+          <div class="product-card">
+            <div class="product-title">
+              <h3>OptionMap</h3>
+              <span class="pill ghost">В разработке</span>
+            </div>
+            <p>Карта опциональности для решений, где важно сохранить варианты будущего.</p>
+            <a class="text-link" href="./products/">Подробнее →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="process">
+        <div class="section-head">
+          <h2>Как мы работаем</h2>
+          <p>Понятный путь от запроса до результата без «магии».</p>
+        </div>
+        <div class="steps">
+          <div class="step"><span>1</span> Формулируем критерии</div>
+          <div class="step"><span>2</span> Строим модель</div>
+          <div class="step"><span>3</span> Проверяем гипотезы</div>
+          <div class="step"><span>4</span> Отдаём результат</div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p>Короткие ответы на частые вопросы.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Как получить доступ?</summary>
+            <p>Оставьте заявку — мы свяжемся и подтвердим формат доступа.</p>
+          </details>
+          <details>
+            <summary>Какие сроки запуска?</summary>
+            <p>Пилот — от 2 до 4 недель, в зависимости от масштаба задачи.</p>
+          </details>
+          <details>
+            <summary>Есть ли интеграции?</summary>
+            <p>Интеграции подключаем по запросу, для BotKit — в планах.</p>
+          </details>
+          <details>
+            <summary>Сколько стоит?</summary>
+            <p>Стоимость рассчитывается по запросу.</p>
+          </details>
+          <details>
+            <summary>Что с данными и безопасностью?</summary>
+            <p>Работаем с минимально необходимыми данными и фиксируем правила доступа.</p>
+          </details>
+          <details>
+            <summary>Какая поддержка?</summary>
+            <p>Поддержка включена в пилот и расширяется на этап внедрения.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section dark" id="contact">
+        <div class="section-head">
+          <h2>Готовы обсудить?</h2>
+          <p>Свяжитесь с нами в Telegram и получите быстрый ответ.</p>
+        </div>
+        <div class="cta-row">
+          <a class="button primary" href="https://t.me/zercon" target="_blank" rel="noopener"
+            >Написать в Telegram</a
+          >
+          <label class="checkbox">
+            <input type="checkbox" />
+            <span>Согласен с политикой обработки данных</span>
+          </label>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <h4>Навигация</h4>
+          <a href="#what">Что мы делаем</a>
+          <a href="#products">Продукты</a>
+          <a href="#process">Как мы работаем</a>
+          <a href="#faq">FAQ</a>
+          <a href="./contact/">Контакты</a>
+        </div>
+        <div>
+          <h4>Продукты</h4>
+          <a href="./products/">BotKit</a>
+          <a href="./products/">OptionMap</a>
+          <a href="./products/">Сравнение</a>
+          <a href="./contact/">Запросить доступ</a>
+          <a href="./contact/">Запросить демо</a>
+        </div>
+        <div>
+          <h4>Компания</h4>
+          <a href="./about/">О компании</a>
+          <a href="./about/">Почему Zercon</a>
+          <a href="./contact/">Email</a>
+          <a href="./contact/">Telegram</a>
+          <a href="./about/">Принципы</a>
+        </div>
+        <div>
+          <h4>Юридическое</h4>
+          <a href="#policy">Политика</a>
+          <a href="#terms">Условия</a>
+          <a href="#security">Безопасность</a>
+          <a href="#data">Данные</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Zercon. Системы без предположений.</span>
+        <div class="footer-actions">
+          <a class="button ghost" href="./products/">Посмотреть продукты</a>
+          <a class="button primary" href="./contact/">Связаться</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+
