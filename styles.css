@@ -904,6 +904,117 @@ a {
   gap: 12px;
 }
 
+@media (max-width: 768px) {
+  .nav {
+    padding: 16px 18px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links,
+  .nav-actions {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 64px 18px 48px;
+    gap: 32px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .hero-visual {
+    min-height: auto;
+    gap: 16px;
+  }
+
+  .glass-card,
+  .flow-board {
+    max-width: 100%;
+  }
+
+  .flow-board svg {
+    max-height: 240px;
+  }
+
+  .section {
+    padding: 56px 18px;
+  }
+
+  .section-head h2 {
+    font-size: 28px;
+  }
+
+  .section-head p,
+  .hero-meta,
+  .page-hero p {
+    font-size: 14px;
+  }
+
+  .product-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .steps {
+    gap: 12px;
+  }
+
+  .step {
+    font-size: 14px;
+  }
+
+  .comparison th,
+  .comparison td {
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+
+  .comparison {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .contact-grid {
+    gap: 16px;
+  }
+
+  .footer-grid {
+    gap: 16px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 @media (max-width: 960px) {
   .nav,
   .nav-links,
