@@ -48,10 +48,11 @@ export default function AboutPage() {
         </div>
         <div className="list-card">
           <p>Email: hello@zercon.example</p>
-          <p>Telegram: @zercon</p>
+          <p>Telegram: @ZER_CON</p>
         </div>
       </section>
     </>
   );
 }
+
 

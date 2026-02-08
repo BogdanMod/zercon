@@ -212,7 +212,7 @@ export default function HomePage() {
           <p>Свяжитесь с нами в Telegram и получите быстрый ответ.</p>
         </div>
         <div className="cta-row">
-          <a className="button primary" href="https://t.me/zercon" target="_blank" rel="noreferrer">
+          <a className="button primary" href="https://t.me/ZER_CON" target="_blank" rel="noreferrer">
             Написать в Telegram
           </a>
           <label className="checkbox">
