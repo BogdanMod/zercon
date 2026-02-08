@@ -47,7 +47,6 @@ export default function AboutPage() {
           <p>Свяжитесь с нами удобным способом.</p>
         </div>
         <div className="list-card">
-          <p>Email: hello@zercon.example</p>
           <p>Telegram: @ZER_CON</p>
         </div>
       </section>

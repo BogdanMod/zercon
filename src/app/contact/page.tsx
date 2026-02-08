@@ -16,7 +16,6 @@ export default function ContactPage() {
           </div>
           <div className="form-card alt-contacts">
             <h3>Альтернативные контакты</h3>
-            <p>Email: hello@zercon.example</p>
             <p>Telegram: @ZER_CON</p>
             <p>Мы отвечаем на сообщения в течение 24 часов.</p>
           </div>
