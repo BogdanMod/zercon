@@ -18,6 +18,20 @@ export default function HomePage() {
               Посмотреть продукты
             </Link>
           </div>
+          <div className="metrics">
+            <div className="metric">
+              <div className="metric-value">2–4 недели</div>
+              <div className="metric-label">пилот</div>
+            </div>
+            <div className="metric">
+              <div className="metric-value">1 система</div>
+              <div className="metric-label">единая модель</div>
+            </div>
+            <div className="metric">
+              <div className="metric-value">0 догадок</div>
+              <div className="metric-label">только критерии</div>
+            </div>
+          </div>
           <p className="hero-meta">Прозрачные критерии, измеримые результаты, ответственность за решения.</p>
         </div>
         <div className="hero-visual">
@@ -103,6 +117,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="divider-line" aria-hidden="true" />
+
       <section className="section light" id="products">
         <div className="section-head">
           <h2>Продукты</h2>
@@ -132,6 +148,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="divider-line" aria-hidden="true" />
+
       <section className="section" id="process">
         <div className="section-head">
           <h2>Как мы работаем</h2>
@@ -152,6 +170,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <div className="divider-line" aria-hidden="true" />
 
       <section className="section" id="faq">
         <div className="section-head">
@@ -204,4 +224,5 @@ export default function HomePage() {
     </>
   );
 }
+
 

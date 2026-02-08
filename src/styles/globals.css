@@ -233,8 +233,8 @@ a {
 .card:hover,
 .feature-tile:hover,
 .form-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
 }
 
 .feature-icon {
@@ -635,6 +635,46 @@ a {
   opacity: 0.45;
 }
 
+.divider-line {
+  height: 1px;
+  background: rgba(242, 244, 248, 0.08);
+  margin: 24px 0;
+}
+
+.metrics {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.metric {
+  min-width: 140px;
+}
+
+.metric-value {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.metric-label {
+  color: #8b92a1;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-top: 6px;
+}
+
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(123, 92, 255, 0.6);
+  outline-offset: 2px;
+}
+
 @keyframes brandIn {
   0% {
     opacity: 0;
@@ -783,6 +823,14 @@ a {
     font-size: 13px;
   }
 
+  .brand-logo {
+    gap: 6px;
+  }
+
+  .brand-wordmark {
+    gap: 4px;
+  }
+
   .hero {
     padding: 64px 18px 48px;
     gap: 32px;
@@ -798,6 +846,14 @@ a {
 
   .hero-actions {
     gap: 10px;
+  }
+
+  .metrics {
+    gap: 16px;
+  }
+
+  .metric-value {
+    font-size: 18px;
   }
 
   .hero-visual {
